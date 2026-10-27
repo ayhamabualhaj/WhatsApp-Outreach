@@ -1,0 +1,6 @@
+company_name,phone,contact_name,industry,city,custom_line,template,notes
+شركة النور للتجارة,962790000001,أحمد,تجارة,عمّان,رأينا افتتاح فرعكم الجديد في عبدون، مبروك!,,fake example row
+مطعم بيت الزيتون,962790000002,,مطاعم,إربد,,,no contact name -> generic greeting
+Tech Hub 360,962790000003,Sara,Software,Amman,Congrats on your recent product launch.,offer_en.txt,English template
+مؤسسة الأمل - Amal Co.,0790000004,محمد,خدمات,الزرقاء,,,local format (normalized to 962...)
+Bad Number LLC,12345,,,,,,invalid phone -> skipped and reported

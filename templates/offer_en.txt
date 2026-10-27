@@ -1,0 +1,9 @@
+{greeting}
+
+This is {my_name} from {my_company}. We offer [describe your services here] to {industry} companies in {city}.
+
+{custom_line}
+
+Would you be open to a 10-minute call this week to see how we could help {company_name}?
+
+{closing}

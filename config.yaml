@@ -1,0 +1,35 @@
+# All tunable values live here. Code should read them, never hardcode them.
+
+# Who is sending: available in templates as {my_name} and {my_company}.
+sender:
+  my_name: "أيهم"
+  my_company: "[اسم شركتك]"
+
+sending:
+  max_per_run: 20            # hard cap on messages per run (keep low to avoid bans)
+  delay_min_seconds: 30      # random delay between messages...
+  delay_max_seconds: 90      # ...picked uniformly in [min, max]
+  dry_run: true              # true = print messages, send nothing
+  default_country_code: "962"  # used to normalize local numbers like 079xxxxxxx
+
+templates:
+  dir: templates
+  default: offer_ar.txt      # Arabic first; a CSV "template" column can override per row
+
+# Light variation: one greeting/closing is picked at random per message.
+# Language is taken from the template file name suffix (_ar / _en).
+variants:
+  ar:
+    greeting_with_name: ["مرحبًا {contact_name}،", "أهلًا {contact_name}،", "السلام عليكم {contact_name}،"]
+    greeting_no_name: ["مرحبًا،", "أهلًا وسهلًا،", "السلام عليكم،"]
+    closing: ["مع التحية،\n{my_name}", "شكرًا لوقتكم،\n{my_name}", "بانتظار ردّكم،\n{my_name}"]
+  en:
+    greeting_with_name: ["Hello {contact_name},", "Hi {contact_name},"]
+    greeting_no_name: ["Hello,", "Hi there,"]
+    closing: ["Best regards,\n{my_name}", "Thanks for your time,\n{my_name}"]
+
+# Files that must never be committed (see .gitignore).
+paths:
+  contacts: contacts.csv
+  session_db: session/neonize.sqlite3
+  log_db: data/send_log.sqlite3

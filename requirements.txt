@@ -1,0 +1,12 @@
+# WhatsApp client (unofficial, built on whatsmeow). Pinned exactly because
+# its API changes between releases. Check the docs before upgrading.
+neonize==0.5.2
+
+# Local web interface
+streamlit>=1.40
+
+# config.yaml parsing
+PyYAML>=6.0
+
+# Tests
+pytest>=8.0

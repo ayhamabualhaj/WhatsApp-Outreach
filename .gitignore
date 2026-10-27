@@ -1,0 +1,35 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# --- Virtual environments ---
+.venv/
+venv/
+
+# --- Secrets ---
+.env
+
+# --- WhatsApp / Neonize session: anyone with these files controls the account. NEVER commit ---
+session/
+*.sqlite3
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# --- Send log and runtime data ---
+data/
+logs/
+*.log
+
+# --- Real contact lists (only the fake example is committed) ---
+contacts*.csv
+!contacts.example.csv
+
+# --- IDE ---
+.idea/
+.vscode/
+
+# --- Local copy of the original spec (CLAUDE.md is the source of truth) ---
+/*.pdf
